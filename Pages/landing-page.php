@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="Styles/landing-page.css">
+    <link rel="stylesheet" href="../Styles/landing-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
 </head>
@@ -12,7 +12,7 @@
     <div class="background-image"></div>
     <div class="container">
         <div class="top-half">
-            <img src="Assets/JoensuuSCLogo.png" alt="Logo">
+            <img src="../Assets/JoensuuSCLogo.png" alt="Logo">
             <h1>YOUR GATEWAY TO<br>ACTIVE LIVING</h1>
         </div>
         <div class="bottom-half">
@@ -25,6 +25,6 @@
             </div>
         </div>
     </div>
-    <script src="Script/landing-page.js"></script>
+    <script src="../Script/landing-page.js"></script>
 </body>
 </html>
