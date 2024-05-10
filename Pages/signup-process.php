@@ -35,6 +35,8 @@ print_r($_POST);
             $stmt = $conn->prepare($sql);
             $stmt->execute([$username, $hashedPassword, $email, $role, $firstName, $lastName]);
 
+            print_r($stmt);
+
             if($stmt) {
                 echo "User registered successfully!";
             } else {
@@ -70,6 +72,4 @@ print_r($_POST);
             echo "Invalid username or password.";
         }
     }
-
-
 ?>
