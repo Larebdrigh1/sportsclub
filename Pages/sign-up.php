@@ -36,11 +36,12 @@
             <div class="input-group">
                 <input type="password" placeholder="Confirm Password" name="cpassword" required>
             </div>
+            <input type="hidden" name="signup" value="1">
             <div class="checkbox-group">
-                <input type="checkbox" id="terms">
+                <input type="checkbox" id="terms" required>
                 <label for="terms">I agree to all the <span style="color: #9F0303;">Terms</span> and <span style="color: #9F0303;">Privacy Policy</span></label>
             </div>
-            <button class="create-account-button" id="createAccountBtn" type="submit" name="signup">Create Account</button>
+            <button class="create-account-button" id="createAccountBtn" type="submit" >Create Account</button>
         </form>
         <p class="redirect">Already have an account? <a href="../Pages/sign-in.php" style="color: #9F0303;">Sign In</a></p>
     </div>
