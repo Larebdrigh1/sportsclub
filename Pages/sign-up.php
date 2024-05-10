@@ -18,7 +18,7 @@
 
         <?php 
             if(isset($_GET['success'])){
-                echo '<span>User Registered Successfully</span>';
+                echo '<p style="color:green">User Registered Successfully</p>';
             }
         ?>
         <form action="signup-process.php" method="post">
