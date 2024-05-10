@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById('joinAnotherTeamBtn').addEventListener('click', function() {
-    window.location.href = '../Pages/join.php';
+    window.location.href = '../Pages/join.html';
   });
   
   document.getElementById("createNewTeamBtn").addEventListener("click", function() {
-    window.location.href = '../Pages/create.php';
+    window.location.href = '../Pages/create.html';
   });
-
   // Define variables for elements
   const homePageBtn = document.getElementById("homePageBtn");
   const currentTeamBtn = document.getElementById("currentTeamBtn");
@@ -19,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const homePageContainer = document.getElementById("home-page-container");
   const teamDetailsContainer = document.getElementById("team-details-container");
   const eventsContent = document.getElementById("events-content");
+  const createEventContent = document.getElementById("create-event-content");
+  const chatContainer = document.getElementById("chat-container");
+  const chatLeaderContainer = document.getElementById("chat-leader-container");
   const locationElement = document.getElementById("location");
   const sportTypeElement = document.getElementById("sportType");
   const memberCountElement = document.getElementById("memberCount");
@@ -26,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const teamLeaderEmailElement = document.getElementById("teamLeaderEmail");
   const teamLeaderPhoneElement = document.getElementById("teamLeaderPhone");
   const memberListElement = document.getElementById("memberList");
-  const createEventContent = document.getElementById("create-event-content");
 
   // Define the team details manually
   const teamDetails = {
@@ -49,6 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to update title
   function updateTitle(title) {
     navTitle.textContent = title;
+  }
+
+  // Function to hide all main content containers
+  function hideAllMainContentContainers() {
+    homePageContainer.style.display = "none";
+    teamDetailsContainer.style.display = "none";
+    eventsContent.style.display = "none";
+    createEventContent.style.display = "none";
+    chatContainer.style.display = "none";
+    chatLeaderContainer.style.display = "none";
   }
 
   // Function to display team details
@@ -74,112 +85,46 @@ document.addEventListener("DOMContentLoaded", function () {
     teamDetailsContainer.style.display = "block";
   }
 
-  // Function to hide team details container
-  function hideTeamDetails() {
-    teamDetailsContainer.style.display = "none";
-  }
-
-  // Function to display events content
-  function displayEventsContent() {
-    // Display the events content
-    eventsContent.style.display = "block";
-  }
-
-  // Function to hide events content
-  function hideEventsContent() {
-    // Hide the events content
-    eventsContent.style.display = "none";
-  }
-
-  // Function to display create event content
-  function displayCreateEventContent() {
-    // Display the create event content
-    createEventContent.style.display = "block";
-  }
-
-  // Function to hide create event content
-  function hideCreateEventContent() {
-    // Hide the create event content
-    createEventContent.style.display = "none";
-  }
-
-  // Home Page Button
+  // Add event listeners to each button
   homePageBtn.addEventListener("click", function () {
     toggleNavbar();
     updateTitle("Home Page");
-    // Show home page container
+    hideAllMainContentContainers();
     homePageContainer.style.display = "block";
-    // Hide team details container
-    hideTeamDetails();
-    // Hide events content
-    hideEventsContent();
-    // Hide create event content
-    hideCreateEventContent();
   });
 
-  // Current Team Button
   currentTeamBtn.addEventListener("click", function () {
     toggleNavbar();
     updateTitle("Current Team Details");
-    // Hide home page container
-    homePageContainer.style.display = "none";
-    // Display team details
+    hideAllMainContentContainers();
     displayTeamDetails();
-    // Hide events content
-    hideEventsContent();
-    // Hide create event content
-    hideCreateEventContent();
   });
 
-  // Message Team Leader Button
   teamChatBtn.addEventListener("click", function () {
     toggleNavbar();
     updateTitle("General Team Messaging");
-    // Hide both containers
-    homePageContainer.style.display = "none";
-    hideTeamDetails();
-    // Hide events content
-    hideEventsContent();
-    // Hide create event content
-    hideCreateEventContent();
+    hideAllMainContentContainers();
+    chatContainer.style.display = "block";
   });
 
-  // New Message Group Button
   messageTeamLeaderBtn.addEventListener("click", function () {
     toggleNavbar();
     updateTitle("Message Team Leader");
-    // Hide both containers
-    homePageContainer.style.display = "none";
-    hideTeamDetails();
-    // Hide events content
-    hideEventsContent();
-    // Hide create event content
-    hideCreateEventContent();
+    hideAllMainContentContainers();
+    chatLeaderContainer.style.display = "block";
   });
 
-  // All Events Button
   eventBtn.addEventListener("click", function () {
     toggleNavbar();
     updateTitle("All Events");
-    // Hide both containers
-    homePageContainer.style.display = "none";
-    hideTeamDetails();
-    // Display events content
-    displayEventsContent();
-    // Hide create event content
-    hideCreateEventContent();
+    hideAllMainContentContainers();
+    eventsContent.style.display = "block";
   });
 
-  // Create Event Button
   createEventBtn.addEventListener("click", function () {
     toggleNavbar();
     updateTitle("Create Event");
-    // Hide both containers
-    homePageContainer.style.display = "none";
-    hideTeamDetails();
-    // Hide events content
-    hideEventsContent();
-    // Display create event content
-    displayCreateEventContent();
+    hideAllMainContentContainers();
+    createEventContent.style.display = "block";
   });
 });
