@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once '../Database/db.php';
 
 // Function to verify hashed passwords
 function verifyPassword($password, $hashedPassword) {
