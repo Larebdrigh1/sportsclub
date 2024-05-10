@@ -12,6 +12,7 @@ function verifyPassword($password, $hashedPassword) {
 }
 
 
+print_r($_POST);
 
 	if(isset($_POST['signup'])) {
         $username = $_POST['username'];
