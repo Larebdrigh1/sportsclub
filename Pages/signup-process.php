@@ -28,12 +28,12 @@ function verifyPassword($password, $hashedPassword) {
             $hashedPassword = hashPassword($password);
 
             // SQL statement for inserting user data
-            $sql = "INSERT INTO [user] (Username, Password, Email, Role, FirstName, LastName) 
+            $sql = "INSERT INTO [user] (Username, Password, Email, FirstName, LastName) 
                     VALUES (?, ?, ?, ?, ?, ?)";
             
             // Prepare and execute the statement
             $stmt = $conn->prepare($sql);
-            $stmt->execute([$username, $hashedPassword, $email, $role, $firstName, $lastName]);
+            $stmt->execute([$username, $hashedPassword, $email, $firstName, $lastName]);
 
             // print_r($stmt);
 
