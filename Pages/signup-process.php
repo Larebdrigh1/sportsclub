@@ -29,7 +29,7 @@ function verifyPassword($password, $hashedPassword) {
 
             // SQL statement for inserting user data
             $sql = "INSERT INTO [user] (Username, Password, Email, FirstName, LastName) 
-                    VALUES (?, ?, ?, ?, ?, ?)";
+                    VALUES (?, ?, ?, ?, ?)";
             
             // Prepare and execute the statement
             $stmt = $conn->prepare($sql);
