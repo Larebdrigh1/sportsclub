@@ -12,7 +12,7 @@ function verifyPassword($password, $hashedPassword) {
 }
 
 
-print_r($_POST);
+// print_r($_POST);
 
 	if(isset($_POST['signup'])) {
 
@@ -35,7 +35,7 @@ print_r($_POST);
             $stmt = $conn->prepare($sql);
             $stmt->execute([$username, $hashedPassword, $email, $role, $firstName, $lastName]);
 
-            print_r($stmt);
+            // print_r($stmt);
 
             if($stmt) {
                 // echo "User registered successfully!";
