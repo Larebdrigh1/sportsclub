@@ -31,12 +31,6 @@
                 <input type="email" placeholder="Email Address" name="email" required>
             </div>
             <div class="input-group">
-                <select name="role">
-                    <option value="Member">Team Member</option>
-                    <option value="Team Leader">Team Leader</option>
-                </select>
-            </div>
-            <div class="input-group">
                 <input type="password" placeholder="Password" name="password" required>
             </div>
             <div class="input-group">
