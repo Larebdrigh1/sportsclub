@@ -1,3 +1,7 @@
+<?php 
+    require_once 'Database/db.php';
+    require_once 'Helper/helper.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

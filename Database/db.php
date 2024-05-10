@@ -15,7 +15,7 @@ $serverName = "tcp:lareb.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
-print_r($conn);
+// print_r($conn);
 ?>
 
 
