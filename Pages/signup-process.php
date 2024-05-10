@@ -15,25 +15,37 @@ function verifyPassword($password, $hashedPassword) {
 print_r($_POST);
 
 	if(isset($_POST['signup'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $email = $_POST['email'];
-        $role = $_POST['role'];
-        $firstName = $_POST['firstName'];
-        $lastName = $_POST['lastName'];
 
-        // Hash the password
-        $hashedPassword = hashPassword($password);
+        try {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $email = $_POST['email'];
+            $role = $_POST['role'];
+            $firstName = $_POST['firstName'];
+            $lastName = $_POST['lastName'];
 
-        // SQL statement for inserting user data
-        $sql = "INSERT INTO [user] (Username, Password, Email, Role, FirstName, LastName) 
-                VALUES (?, ?, ?, ?, ?, ?)";
+            // Hash the password
+            $hashedPassword = hashPassword($password);
+
+            // SQL statement for inserting user data
+            $sql = "INSERT INTO [user] (Username, Password, Email, Role, FirstName, LastName) 
+                    VALUES (?, ?, ?, ?, ?, ?)";
+            
+            // Prepare and execute the statement
+            $stmt = $conn->prepare($sql);
+            $stmt->execute([$username, $hashedPassword, $email, $role, $firstName, $lastName]);
+
+            if($stmt) {
+                echo "User registered successfully!";
+            } else {
+                // If execute() returns false, display an error message
+                echo "Error: Failed to register user.";
+            }
+        } catch (PDOException $e) {
+            // Handle errors
+            echo "Error: " . $e->getMessage();
+        }
         
-        // Prepare and execute the statement
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([$username, $hashedPassword, $email, $role, $firstName, $lastName]);
-
-        echo "User registered successfully!";
     }
 
     // Sign-in functionality
