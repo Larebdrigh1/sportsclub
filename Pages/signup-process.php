@@ -1,4 +1,6 @@
 <?php
+require_once '../Database/db.php';
+
 // Function to hash passwords
 function hashPassword($password) {
     return password_hash($password, PASSWORD_DEFAULT);
