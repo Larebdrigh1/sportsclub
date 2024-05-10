@@ -1,5 +1,3 @@
-<!-- Html code: -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +6,12 @@
   <title>Create Team</title>
   <link rel="stylesheet" href="../Styles/create.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
 <div class="container">
@@ -40,4 +44,3 @@
 <script src="../Script/createGoToDashboard.js"></script>
 </body>
 </html>
-
