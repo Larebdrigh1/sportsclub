@@ -396,4 +396,76 @@ html {
     justify-content: center;
   }
   
-  
+  .chat-box {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message {
+  background-color: #E7E7E7;
+  padding: 10px;
+  margin-bottom: -0px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  position: relative; /* Relative positioning for sender names */
+}
+
+.message.sent {
+    background-color: #E7E7E7; /* Light blue color */
+  text-align: center;
+}
+
+.message.received {
+    background-color: #E7E7E7; /* Light blue color */
+  text-align: center;
+}
+
+.message.sent .sender {
+  position: absolute;
+  top:-13px;
+  left: 5px;
+  font-size: 10px; /* Small size for sender names */
+}
+
+.message.received .sender {
+  position: absolute;
+  top: -13px;
+  left: 5px;
+  font-size: 10px; /* Small size for sender names */
+}
+
+.message-input {
+  margin-top: 90px;
+  display: flex;
+  align-items: center; /* Align items in center */
+}
+
+.message-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.message-input button {
+  padding: 13px 13px;
+  background-color: #B60303;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /*background-image: url('https://www.clker.com/cliparts/c/3/0/7/12456877162087486429Soeb_Plain_Arrow_7.svg.hi.png'); !* Add attachment icon *!*/
+}
+
+.attachment-icon:before,
+.message-input button:before {
+  content: "";
+  display: inline-block;
+  width: 20px; /* Adjust width as needed */
+  height: 20px; /* Adjust height as needed */
+  background-image: url('https://www.clker.com/cliparts/c/3/0/7/12456877162087486429Soeb_Plain_Arrow_7.svg.hi.png'); /* Add attachment icon */
+  background-size: cover;
+  margin-right: 5px;
+}
