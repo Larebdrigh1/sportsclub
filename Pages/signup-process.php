@@ -38,7 +38,9 @@ print_r($_POST);
             print_r($stmt);
 
             if($stmt) {
-                echo "User registered successfully!";
+                // echo "User registered successfully!";
+                header("Location: sign-up.php?success=1");
+                exit();
             } else {
                 // If execute() returns false, display an error message
                 echo "Error: Failed to register user.";

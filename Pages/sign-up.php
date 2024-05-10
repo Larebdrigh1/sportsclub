@@ -15,6 +15,12 @@
         </div>
         <h2>Sign Up</h2>
         <p class="subtitle">Let's get you all set up so you can access your personal account.</p>
+
+        <?php 
+            if(isset($_GET['success'])){
+                echo '<span>User Registered Successfully</span>';
+            }
+        ?>
         <form action="signup-process.php" method="post">
             <div class="input-group">
                 <input type="text" placeholder="First Name" name="firstName" required>
