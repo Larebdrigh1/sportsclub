@@ -1,3 +1,11 @@
+<?php
+session_start(); // Start or resume a session
+
+if (isset($_SESSION['userID'])) {
+    header("Location: dashboard.php");
+    exit(); // Ensure that script execution stops after redirection
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

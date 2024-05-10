@@ -38,6 +38,9 @@ if (!isset($_SESSION['userID'])) {
           <button id="eventBtn">View All Events</button>
           <button id="createEventBtn">Create Event</button>
         </div>
+
+        <a href="logout.php">Logout</a>
+
       </aside>
 
       <!-- Main Content -->

@@ -1,3 +1,12 @@
+<?php
+session_start(); // Start or resume a session
+
+// Check if user is not logged in, redirect to sign-in page
+if (!isset($_SESSION['userID'])) {
+    header("Location: sign-in.php");
+    exit(); // Ensure that script execution stops after redirection
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
