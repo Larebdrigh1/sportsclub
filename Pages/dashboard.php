@@ -98,6 +98,69 @@
             </div>
           </div>
 
+          <!-- TEAM CHAT -->
+          <div id="chat-container" class="right-side" style="display: none; padding: 30px;">
+            <!-- Chat between Hudeifa and Farnoosh -->
+            <div class="page-container">
+              <div class="chat-box">
+                <div class="message received">
+                  <span class="sender">Farnoosh</span>It will be nice to see the whole team.
+                </div>
+                <div class="message sent">
+                  <span class="sender">Hudeifa</span>Yeah, sure.
+                </div>
+                <div class="message received">
+                  <span class="sender">Farnoosh</span>Are you done with the practices?.
+                </div>
+                <div class="message sent">
+                  <span class="sender">Hudeifa</span>Not much but a little bit yesterday.
+                </div>
+                <div class="message received">
+                  <span class="sender">Farnoosh</span>We have a match after two days.
+                </div>
+                <div class="message sent">
+                  <span class="sender">Hudeifa</span>Yeah, sure We'll win.
+                </div>
+              </div>
+              <!-- Write your message textfield -->
+              <div class="message-input">
+                <input type="text" placeholder="Write your message..." />
+                <button></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEAM LEADER MESSAGING -->
+          <div id="chat-leader-container" class="right-side" style="display: none; padding: 30px;">
+            <!-- Chat between Hudeifa and Farnoosh -->
+            <div class="page-container">
+              <div class="chat-box">
+                <div class="message received">
+                  <span class="sender">Precious</span>Hello, sorry i can't make it to the match today.
+                </div>
+                <div class="message sent">
+                  <span class="sender">Malaika</span>Why? Hope you are okay?.
+                </div>
+                <div class="message received">
+                  <span class="sender">Precious</span>Yes I am. Just a little down and i dont feel too well.
+                </div>
+                <div class="message sent">
+                  <span class="sender">Malaika</span>Oh okay, get well soon.
+                </div>
+                <div class="message received">
+                  <span class="sender">Precious</span>We have a match next month right?.
+                </div>
+                <div class="message sent">
+                  <span class="sender">Malaika</span>Yeah.
+                </div>
+              </div>
+              <!-- Write your message textfield -->
+              <div class="message-input">
+                <input type="text" placeholder="Write your message..." />
+                <button></button>
+              </div>
+            </div>
+          </div>
           <!--CURRENT TEAM BUTTON-->
           <div id="team-details-container" class="page-container" style="display: none;">
             <h2>Team Details</h2>
@@ -122,7 +185,7 @@
          <!-- Container for messaging pages -->
 
         <!-- All Events Content -->
-      <div id="events-content" class="right-side" style="display: none;">
+      <div id="events-content" class="right-side" style="display: none;padding: 30px;">
         <!-- Events content goes here -->
         <div class="Events-text">
           <h2> <span class="Heading">Upcoming Events </span> </h2>
@@ -183,7 +246,7 @@
       </div>
 
       <!-- CREATE EVENTS  -->
-      <div id="create-event-content" class="right-side" style="display: none; padding: 20px;">
+      <div id="create-event-content" class="right-side" style="display: none; padding: 30px;">
       <h2>Sports Type<span  style="color: #9F0303; font-size: medium;">*</span></h2>
       <div class="input-group">
         <input type="text" placeholder="Enter Sport Type">
