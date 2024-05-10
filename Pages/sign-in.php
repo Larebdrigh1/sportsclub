@@ -15,20 +15,21 @@
         </div>
         <h2>Login</h2>
         <p class="subtitle">Login to access your Joensuu FC account.</p>
-        <form action="">
+        <form action="signin-process.php" method="post">
             <div class="input-group">
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" name="username" required>
             </div>
             <div class="input-group">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" name="password" required>
             </div>
             <div class="checkbox-group">
-                <input type="checkbox" id="remember">
+                <input type="checkbox" id="remember" >
                 <label for="remember">Remember me</label>
                 <a href="#" style="color: #9F0303;">Forgot Password</a>
             </div>
+            <input type="hidden" name="signin" value="1">
         </form>
-        <button class="sign-in-button" id="signInToDashBtn">Sign In</button>
+        <button class="sign-in-button" id="signInToDashBtn" type="submit">Sign In</button>
         <p class="redirect">Don't have an account? <a href="../Pages/sign-up.php" style="color: #9F0303;">Sign Up</a></p>
 
     </div>

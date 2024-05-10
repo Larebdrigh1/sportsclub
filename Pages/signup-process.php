@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../Database/db.php';
 
 // Function to hash passwords
@@ -6,10 +7,7 @@ function hashPassword($password) {
     return password_hash($password, PASSWORD_DEFAULT);
 }
 
-// Function to verify hashed passwords
-function verifyPassword($password, $hashedPassword) {
-    return password_verify($password, $hashedPassword);
-}
+
 
 
 // print_r($_POST);
@@ -69,9 +67,13 @@ function verifyPassword($password, $hashedPassword) {
 
         // Verify password
         if($row && verifyPassword($password, $row['Password'])) {
-            echo "Sign-in successful! UserID: " . $row['UserID'];
+            $_SESSION['userID'] = $row['UserID'];
+            header("Location: sign-in.php?success=1");
+                exit();
         } else {
             echo "Invalid username or password.";
+            header("Location: sign-in.php?success=0");
+            exit();
         }
     }
 ?>
