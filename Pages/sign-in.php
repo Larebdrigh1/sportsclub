@@ -28,8 +28,9 @@
                 <a href="#" style="color: #9F0303;">Forgot Password</a>
             </div>
             <input type="hidden" name="signin" value="1">
+            <button class="sign-in-button" id="signInToDashBtn" type="submit">Sign In</button>
         </form>
-        <button class="sign-in-button" id="signInToDashBtn" type="submit">Sign In</button>
+        
         <p class="redirect">Don't have an account? <a href="../Pages/sign-up.php" style="color: #9F0303;">Sign Up</a></p>
 
     </div>
