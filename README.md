@@ -1,0 +1,1 @@
+This is a small Web programming project that is just an unfinished project from the college where we intigrated Azure DevOps and created this web appliartion with Agile Methodoloigies, while working together as a team.
